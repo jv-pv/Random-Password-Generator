@@ -1,0 +1,163 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: ABC;
+    src: url(./Fonts/ABCHelveestiSpikesEdu-Regular.otf);
+}
+
+body {
+    font-family: ABC ;
+    background-image: url(./Images/Dark\ -\ Blue\ 1.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    background-color: rgb(213, 213, 251);
+    width: 500px;
+    padding: 25px 60px 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px inset black;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.RandomPW {
+    color: #6985b9;
+}
+
+.text-wrapper, h1, p {
+    padding: 10px 5px 6px;
+}
+
+.passwordLength-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 0;
+}
+
+.passwordLength-wrapper > label {
+    padding-right: 20px;
+}
+
+.passwordLength-wrapper > input {
+    width: 40px;
+    background-color: #2f3a4e;
+    color: aliceblue;
+    border: unset;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    padding: 0 0 0 4px;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#generate-Button {
+    width: 250px;
+    padding: 10px;
+    text-transform: uppercase;
+    border: unset;
+    border-radius: 3px;
+}
+ 
+#clear-Button {
+    width: 250px;
+    padding: 10px;
+    text-transform: uppercase;
+    border: unset;
+    border-radius: 3px;
+}
+
+button {
+    background-color: black;
+    color: aliceblue;
+    text-shadow: 0 0 5px white;
+    box-shadow: 0px 5px 5px black;
+}
+
+button:hover {
+    background-color: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+}
+
+button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 5px var(--score-container-color);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding: 25px 0;
+    gap: 40px;
+}
+
+#passwordElOne {
+    background-color: #2f3a4e;
+    width: 170px;
+    height: 30px;
+    max-width: auto;
+    min-width: auto;
+    border: unset;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    padding:0 20px 0 30px;
+    color: aliceblue;
+}
+
+#passwordElTwo {
+    background-color: #2f3a4e;
+    width: 170px;
+    height: 30px;
+    max-width: auto;
+    min-width: auto;
+    border: unset;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    padding:0 20px 0 30px;
+    color: aliceblue;
+}
+
+label > h4 {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    position: absolute;
+    bottom: 5px ;
+    left: 10px;
+    font-size: 20px;
+    color: aliceblue;
+    letter-spacing: 3px;
+}
