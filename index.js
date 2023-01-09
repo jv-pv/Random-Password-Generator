@@ -1,8 +1,10 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U"
-,"V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u"
-,"v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^",
-"&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U",
+                    "V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u",
+                    "v","w","x","y","z"];
+const symbols = ["~","`","!","@","#","$","%","^", "&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?", "/"];
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const includeSymbolsCheckbox = document.getElementById("includeSymbols");
+const includeNumbersCheckbox = document.getElementById("includeNumbers");
 
 // Paragraph Version 1.0
 
@@ -47,4 +49,44 @@ function getClearPassword() {
     passwordInputOne.value = "";
     passwordInputTwo.value = ""
 }
+
+passwordInputOne.addEventListener("click", function() {
+  this.select();
+  document.execCommand("copy");
+  showNotification();
+});
+
+passwordInputTwo.addEventListener("click", function() {
+  this.select();
+  document.execCommand("copy");
+  showNotification();
+});
+
+function showNotification() {
+  let notification = document.getElementById("notification");
+  notification.style.display = "block";
+  setTimeout(function() {
+    notification.style.display = "none";
+  }, 1500); // hide the notification after 1 second (1000 milliseconds)
+}
+
+
+
+
+includeSymbolsCheckbox.addEventListener("change", function() {
+  if (this.checked) {
+    characters.push(...symbols);
+  } else {
+    characters.splice(characters.indexOf(...symbols), symbols.length);
+  }
+});
+
+includeNumbersCheckbox.addEventListener("change", function() {
+  if (this.checked) {
+    characters.push(...numbers);
+  } else {
+    characters.splice(characters.indexOf(...numbers), numbers.length);
+  }
+});
+
 
