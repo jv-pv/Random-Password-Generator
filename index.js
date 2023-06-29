@@ -47,7 +47,7 @@ function showNotification() {
   notification.style.display = "block";
   setTimeout(function() {
     notification.style.display = "none";
-  }, 1500); // hide the notification after 1 second (1000 milliseconds)
+  }, 1500);
 }
 
 includeSymbolsCheckbox.addEventListener("change", function() {
