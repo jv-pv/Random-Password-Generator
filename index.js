@@ -6,25 +6,6 @@ const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const includeSymbolsCheckbox = document.getElementById("includeSymbols");
 const includeNumbersCheckbox = document.getElementById("includeNumbers");
 
-// Paragraph Version 1.0
-
-// let passwordInputOne = document.getElementById("passwordElOne")
-// let passwordInputTwo = document.getElementById("passwordElTwo")
-
-// function generatePassword() {
-//     passwordInputOne.textContent = ""
-//     passwordInputTwo.textContent = ""
-//     for (i = 0; i < 16; i++) {
-//         let randomCharacterOne = characters[Math.floor(Math.random() * characters.length)]
-//         let randomCharacterTwo = characters[Math.floor(Math.random() * characters.length)]
-//         passwordInputOne.textContent += randomCharacterOne
-//         passwordInputTwo.textContent += randomCharacterTwo
-//     }
-// }
-
-
-// Input Version 1.0
-
 let passwordInputOne = document.getElementById("passwordElOne");
 let passwordInputTwo = document.getElementById("passwordElTwo");
 let passwordLength = document.getElementById("passwordLengthEl");
@@ -32,7 +13,6 @@ let passwordLength = document.getElementById("passwordLengthEl");
 passwordLength.addEventListener("input", function() {
     passwordLength = this.value;
 });
-
 
 function getRandomPassword() {
     passwordInputOne.value = "";
@@ -69,9 +49,6 @@ function showNotification() {
     notification.style.display = "none";
   }, 1500); // hide the notification after 1 second (1000 milliseconds)
 }
-
-
-
 
 includeSymbolsCheckbox.addEventListener("change", function() {
   if (this.checked) {
