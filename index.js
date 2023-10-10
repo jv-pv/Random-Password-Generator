@@ -21,24 +21,24 @@ function getRandomPassword() {
         let randomCharacterOne = characters[Math.floor(Math.random() * characters.length)]
         let randomCharacterTwo = characters[Math.floor(Math.random() * characters.length)]
         passwordInputOne.value += randomCharacterOne;
+        console.log(passwordInputOne.value = randomCharacterOne)
         passwordInputTwo.value += randomCharacterTwo;
     }
 }
 
-function getClearPassword() {
+
+function clearPassword() {
     passwordInputOne.value = "";
     passwordInputTwo.value = ""
 }
 
 passwordInputOne.addEventListener("click", function() {
   this.select();
-  document.execCommand("copy");
   showNotification();
 });
 
 passwordInputTwo.addEventListener("click", function() {
   this.select();
-  document.execCommand("copy");
   showNotification();
 });
 
